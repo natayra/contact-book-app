@@ -1,4 +1,5 @@
 import React from "react";
+import avatar from "../../Assets/Avatar/avatar.png";
 import Contact from "../Contact/index";
 import AddContact from "../AddContact/index";
 
@@ -9,15 +10,22 @@ export default class ContactBook extends React.Component {
         id: 1,
         name: "Propulsion Academy",
         address: "Zurich",
-        avatar: "propulsion-academy-logo.png",
+        avatar: avatar,
       },
       {
         id: 2,
         name: "Natayra Santos",
         address: "Zurich",
-        avatar: "natayra.png",
+        avatar: avatar,
       },
     ],
+  };
+
+  addContactFunction = (newContact) => {
+    const newContacts = [...this.state.contacts, newContact];
+    this.setState({
+      contacts: newContacts,
+    });
   };
 
   render() {
@@ -26,7 +34,7 @@ export default class ContactBook extends React.Component {
         {this.state.contacts.map((contact) => (
           <Contact key={contact.id} contact={contact} />
         ))}
-          <AddContact />
+        <AddContact addContactFunction={this.addContactFunction} />
       </div>
     );
   }

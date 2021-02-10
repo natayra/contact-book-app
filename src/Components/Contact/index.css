@@ -1,11 +1,17 @@
 .Contact-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: aqua;
-    width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  margin: 15px;
 }
 
 .contact {
-    width: 20vw;
+  width: 20vw;
+}
+
+#avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
 }

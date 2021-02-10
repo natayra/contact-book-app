@@ -1,32 +1,47 @@
-
 .AddContact-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .addContact-input {
-    width: 15vw;
-    height: 25px;
+  width: 15vw;
+  height: 25px;
 }
 
 #avatar-pic {
-    width: 80px;
-    height: 80px;
-    border-radius: 50px;
-    border: 1px solid black;
-    
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+}
+
+#avatar-select-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  border: transparent;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#avatar-select-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  border: transparent;
+  outline: none;
+  cursor: pointer;
 }
 
 #avatar-input {
-    width: 13vw;
-}
+  width: 13vw;
 
+  display: none;
+}
 
 #submit-button {
-    width: 100px;
-    height: 50px;
-    cursor: pointer;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
 }
-
-

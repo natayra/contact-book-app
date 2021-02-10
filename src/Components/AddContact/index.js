@@ -1,43 +1,74 @@
 import React, { useState } from "react";
-import logo from "../../logo.svg";
+import avatar from "../../Assets/Avatar/avatar.png";
 import "./index.css";
 
 class AddContact extends React.Component {
-  state = {
-    image: null,
-    fileRef: React.createRef(),
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: null,
+      name: "",
+      address: "",
+      avatar: avatar,
+    };
+  }
 
   avatarHandler = (e) => {
     this.setState((state) => {
-      const image = this.state.fileRef.current.value;
-
       let avatarInput = window.URL.createObjectURL(e.target.files[0]);
-      console.log(avatarInput)
       return {
-        image: avatarInput,
+        avatar: avatarInput,
       };
     });
   };
 
+  addContactInput = (e) => {
+    const id = 12;
+    const name = document.getElementById("name").value;
+    const address = document.getElementById("address").value;
+    this.setState({
+      id: id,
+      name: name,
+      address: address,
+      avatar: this.state.avatar,
+    });
+  };
 
   render() {
     return (
       <div className="AddContact-container">
-        <input className="addContact-input" id="id" placeholder="id"/>
-        <input className="addContact-input" id="name" placeholder="name"/>
-        <input className="addContact-input" id="address" placeholder="address"/>
+        <input
+          className="addContact-input"
+          id="name"
+          placeholder="name"
+          onChange={this.addContactInput}
+        />
+        <input
+          className="addContact-input"
+          id="address"
+          placeholder="address"
+          onChange={this.addContactInput}
+        />
         <input
           type="file"
-          placeholder="avatar"
           id="avatar-input"
           name="avatar-input"
           accept="image/apng, image/bmp, image/gif, image/jpeg, image/pjpeg, image/png, image/svg+xml, image/tiff, image/webp, image/x-icon"
-          ref={this.state.fileRef}
           onChange={this.avatarHandler}
         />
-        <img id="avatar-pic" src={this.state.image}></img>
-        <button id="submit-button">
+        <img
+          src={this.state.avatar}
+          id="avatar-select-button"
+          onClick={() => {
+            document.getElementById("avatar-input").click();
+          }}
+        />
+        <button
+          id="submit-button"
+          onClick={() => {
+            this.props.addContactFunction(this.state);
+          }}
+        >
           Add
         </button>
       </div>
