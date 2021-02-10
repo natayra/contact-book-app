@@ -1,0 +1,32 @@
+
+.AddContact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addContact-input {
+    width: 15vw;
+    height: 25px;
+}
+
+#avatar-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: 1px solid black;
+    
+}
+
+#avatar-input {
+    width: 13vw;
+}
+
+
+#submit-button {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
+

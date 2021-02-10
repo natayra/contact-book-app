@@ -1,0 +1,11 @@
+.Contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+    width: 80vw;
+}
+
+.contact {
+    width: 20vw;
+}
