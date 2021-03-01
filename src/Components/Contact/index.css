@@ -60,6 +60,8 @@
   height: 80px;
   border-radius: 50px;
   margin: 10px 0px 10px 0px;
+  justify-content: center;
+
 
 }
 
@@ -69,11 +71,16 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 0px 20px 0px 20px;
+  margin: 0px 20px 0px 15px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 26px;
   font-weight: 500;
   font-variant-caps: all-petite-caps;
   color:rgb(18, 112, 143);
 
+}
+
+
+.a-button {
+  width: 360px;
 }

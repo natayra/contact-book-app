@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import EditContact from "../EditContact"
+import EditContact from "../EditContact";
 import "./index.css";
 
 const Contact = (props) => {
@@ -46,7 +46,8 @@ const Contact = (props) => {
       <div className="contact">{name}</div>
       <div className="contact">{address}</div>
       <div className="contact">{phone}</div>
-      <img className="contact" id="avatar" src={avatar}></img>
+     {id===0 ? <button className="a-button" id="invisible-button"></button> : 
+      <><img className="contact" id="avatar" src={avatar}></img>
       <button id="edit-button" onClick={editHandler}>
         Edit
       </button>
@@ -57,9 +58,19 @@ const Contact = (props) => {
         }}
       >
         Delete
-      </button>
-    </div>
-  ) : (<EditContact edit={edit} id={id} name={name} address={address} phone={phone} avatar={avatar} addContactInput={addContactInput} setEdit={setEdit}/>)
+      </button></>}
+    </div>) : (
+    <EditContact
+      edit={edit}
+      id={id}
+      name={name}
+      address={address}
+      phone={phone}
+      avatar={avatar}
+      addContactInput={addContactInput}
+      setEdit={setEdit}
+    />
+  );
 };
 
 export default Contact;
