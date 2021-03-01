@@ -3,15 +3,77 @@
   justify-content: space-between;
   align-items: center;
   width: 80vw;
-  margin: 15px;
+  box-shadow: 10px 10px 5px #d3d3d3;
 }
 
-.contact {
-  width: 20vw;
+.Contact-container:nth-child(2n+1) {
+  background-color: rgb(187, 212, 221);
+
+}
+
+.Contact-container:nth-child(2n+0) {
+  background-color: rgb(245, 245, 245);
+
+}
+
+#edit-button {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  margin: 0px 15px 0px 15px;
+  background-color: rgb(228, 228, 228);
+  border: 2px solid rgb(155, 155, 155);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(18, 112, 143);
+  outline: none;
+
+}
+
+#delete-button {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  margin: 0px 15px 0px 15px;
+  background-color: rgb(228, 228, 228);
+  border: 2px solid rgb(155, 155, 155);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(18, 112, 143);
+  outline: none;
+
+}
+
+#edit-button:hover { background-color: rgb(138, 177, 190);
+  color: white
+}
+
+#delete-button:hover {
+  background-color: rgb(138, 177, 190);
+  color: white
 }
 
 #avatar {
   width: 80px;
   height: 80px;
   border-radius: 50px;
+  margin: 10px 0px 10px 0px;
+
+}
+
+.contact {
+  width: 18vw;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 20px 0px 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  font-variant-caps: all-petite-caps;
+  color:rgb(18, 112, 143);
+
 }
